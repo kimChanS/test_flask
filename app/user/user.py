@@ -2,7 +2,7 @@
 from flask import Blueprint, json
 from flask.views import MethodView
 
-mod = Blueprint('user', __name__)
+mod = Blueprint('user_blueprint', __name__)
 
 class UserAPI(MethodView):
     def get(self):
