@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  <ul>
+  {% for message in messages %}
+  <li>{{message}}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+{% endwith %}
+
+<form method="post", action="/user/login">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username(size=20) }}
+    {% for error in form.username.errors %}
+    <p><b>{{error}}</b></p>
+    {% endfor %}
+    <br />
+    {{ form.email.label }} {{ form.email }}
+    {% for error in form.email.errors %}
+    <p><b>{{error}}</b></p>
+    {% endfor %}
+    <br />
+    <input type='submit' value='login'>
+</form>
+{% endblock %}

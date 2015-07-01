@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% for message in get_flashed_messages() %}
+{{message}}
+{% endfor %}
+<hr />
+{% if current_user.is_authenticated %}
+{{ current_user.username }} <br />
+{{ current_user.email }}
+{% else %}
+<p>U have not log in yet'</p>
+{% endif %}
+
+{% endblock %}
