@@ -6,4 +6,6 @@ use flask-admin to manage user data
 
 use flask-sqlalchemy to create user ORM
 
-next step: try to use flask-login to login
+use flask-login to login
+
+question: template's current\_user.is\_authenticated
