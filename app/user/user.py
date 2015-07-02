@@ -27,8 +27,9 @@ mod.add_url_rule('/users/', view_func=UserAPI.as_view('users'))
 def login():
     form = LoginForm()
     if form.validate_on_submit():
+        remember_me = form.remember_me.data
         user = form.get_user()
-        login_user(user)
+        login_user(user, remember=remember_me)
         flash('Log in successfully')
         return redirect(url_for('index'))
     return render_template('login.html', form=form)
