@@ -8,4 +8,6 @@ use flask-sqlalchemy to create user ORM
 
 use flask-login to login
 
-question: template's current\_user.is\_authenticated
+note: in jinja2's usage, function should always has "()", different from django(without "()")
+
+next step: remember\_me!
