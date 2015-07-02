@@ -6,7 +6,7 @@
 {{message}}
 {% endfor %}
 <hr />
-{% if current_user.is_authenticated %}
+{% if current_user.is_authenticated() %}
 {{ current_user.username }} <br />
 {{ current_user.email }}
 {% else %}
