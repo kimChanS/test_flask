@@ -28,6 +28,8 @@
     <p><b>{{error}}</b></p>
     {% endfor %}
     <br />
+    {{ form.recaptcha }}
+    <br />
     {{ form.remember_me.label }} {{ form.remember_me }}
     <input type='submit' value='login'>
 </form>
