@@ -10,4 +10,4 @@ use flask-login to login
 
 note: in jinja2's usage, function should always has "()", different from django(without "()")
 
-next step: remember\_me!
+next step: captchafield
