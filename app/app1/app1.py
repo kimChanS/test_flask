@@ -7,5 +7,5 @@ mod = Blueprint('app1_blueprint', __name__)
 
 @mod.route('/')
 def index():
-    print User.query.all()
+    print(User.query.all())
     return "hello app1"

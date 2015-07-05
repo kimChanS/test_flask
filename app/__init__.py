@@ -28,7 +28,7 @@ login_manager.login_view = "user_blueprint.login"
 
 @app.route('/')
 def index():
-    print url_for('index')
-    print url_for('app1_blueprint.index')
-    print url_for('app2_blueprint.index')
+    print(url_for('index'))
+    print(url_for('app1_blueprint.index'))
+    print(url_for('app2_blueprint.index'))
     return render_template('index.html')
