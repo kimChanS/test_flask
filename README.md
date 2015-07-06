@@ -1,5 +1,7 @@
 test flask
 
+first: pip3 install -r requirements.txt
+
 use blueprint to gather multiple app to work
 
 use flask-admin to manage user data
