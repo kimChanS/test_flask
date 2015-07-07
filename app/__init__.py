@@ -14,10 +14,10 @@ mail = Mail(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-from app1.app1 import mod as app1
-from app2.app2 import mod as app2
-from user.user import mod as user
-from user.models import User as userModel
+from .app1.app1 import mod as app1
+from .app2.app2 import mod as app2
+from .user.user import mod as user
+from .user.models import User as userModel
 
 app.register_blueprint(app1, url_prefix='/app1')
 app.register_blueprint(app2, url_prefix='/app2')
@@ -30,7 +30,7 @@ login_manager.login_view = "user_blueprint.login"
 
 @app.route('/')
 def index():
-    print url_for('index')
-    print url_for('app1_blueprint.index')
-    print url_for('app2_blueprint.index')
+    print(url_for('index'))
+    print(url_for('app1_blueprint.index'))
+    print(url_for('app2_blueprint.index'))
     return render_template('index.html')

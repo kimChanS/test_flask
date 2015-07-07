@@ -6,6 +6,8 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(_basedir, 'test.db')
 
 SECRET_KEY = 'sdfkjwlerjwejr'
 
+DEBUG = True
+
 # mail
 MAIL_USERNAME = '120831629'
 MAIL_PASSWORD = 'password'
