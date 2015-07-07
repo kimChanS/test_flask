@@ -4,10 +4,12 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object('config')
 db = SQLAlchemy(app)
+mail = Mail(app)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
