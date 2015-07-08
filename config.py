@@ -9,10 +9,4 @@ SECRET_KEY = 'sdfkjwlerjwejr'
 DEBUG = True
 
 # mail
-MAIL_USERNAME = '120831629'
-MAIL_PASSWORD = 'password'
-MAIL_DEFAULT_SENDER = '"Sender" <120831629@qq.com>'
-MAIL_SERVER = 'smtp.qq.com'
-MAIL_PORT = 465
-MAIL_USER_SSL = True
-MAIL_USER_TLS = False
+USER_ENABLE_EMAIL = False
