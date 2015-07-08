@@ -15,9 +15,12 @@ class User(UserMixin, db.Model):
     confirmed_at = db.Column(db.DateTime())
 
     # User information
-    is_active = db.Column(db.Boolean(), nullable=False, server_default='0')
+    active = db.Column('is_active', db.Boolean(), nullable=False, server_default='0')
     first_name = db.Column(db.String(50), nullable=False, server_default='')
     last_name = db.Column(db.String(50), nullable=False, server_default='')
+
+    def is_active(self):
+        return self.active
 
 
 db_adapter = SQLAlchemyAdapter(db, User)
